@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Heni Lachouak | AI & Data Engineer</title>
+<meta name="description" content="AI & Data Engineer building production LLM systems and the data pipelines that feed them: OCR to ETL, RAG, fine-tuning, edge AI.">
+<meta name="theme-color" content="#0d1230">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Heni Lachouak | AI & Data Engineer">
+<meta property="og:description" content="Production LLM systems, data pipelines, computer vision. 75% less manual review, 97% precision on edge AI, Q1 publication.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Heni Lachouak","jobTitle":"AI & Data Engineer","email":"hani.lachouak@gmail.com","address":{"@type":"PostalAddress","addressCountry":"TN"},"knowsAbout":["LLM","RAG","ETL","Computer Vision","Deep Learning"]}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1230;--bg2:#161c45;--ink:#eef0ff;--mute:#9aa3d6;--line:#2a3270;--a:#6c8dff;--b:#ff7a59;--ok:#54e0b0;
+--d:'Bricolage Grotesque',system-ui,sans-serif;--m:'IBM Plex Mono',ui-monospace,monospace;box-sizing:border-box;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f3f4ff;--bg2:#e4e7ff;--ink:#11163a;--mute:#4f589a;--line:#c5cbf2;--a:#3555e6;--b:#d9482a;--ok:#0f9d73}}
+:root[data-theme=light]{--bg:#f3f4ff;--bg2:#e4e7ff;--ink:#11163a;--mute:#4f589a;--line:#c5cbf2;--a:#3555e6;--b:#d9482a;--ok:#0f9d73}
+*{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--d);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(18px,5vw,64px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav b{font-weight:800;letter-spacing:-.02em}
+nav div{display:flex;gap:22px;align-items:center;font-size:15px}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+button{font:inherit;color:inherit;cursor:pointer}
+#theme{background:none;border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-size:14px}
+section{padding:clamp(64px,10vw,120px) clamp(18px,5vw,64px);max-width:1180px;margin:auto}
+#hero{position:relative;max-width:none;min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding-top:60px;overflow:hidden}
+#hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hw{position:relative;max-width:1180px;margin:auto;width:100%;pointer-events:none}
+.hw *{pointer-events:auto}
+h1{font-size:clamp(44px,8.6vw,116px);line-height:.95;letter-spacing:-.045em;font-weight:800;margin:0 0 28px;max-width:11ch}
+.sub{max-width:52ch;color:var(--mute);font-size:clamp(17px,2vw,21px)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:13px 24px;border-radius:99px;text-decoration:none;font-weight:700;border:1px solid var(--line);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--b);border-color:var(--b);color:#fff}
+.pipe{font:500 13px var(--m);color:var(--mute);margin-top:44px;display:flex;gap:10px;flex-wrap:wrap}
+.pipe span{padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+h2{font-size:clamp(32px,5vw,58px);letter-spacing:-.035em;line-height:1;margin:0 0 14px;font-weight:800}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 44px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.stats div{background:var(--bg2);padding:28px 24px}
+.stats b{display:block;font-size:clamp(40px,5vw,64px);letter-spacing:-.04em;line-height:1;color:var(--a);font-weight:800}
+.stats span{color:var(--mute);font-size:15px}
+details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:26px 0;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary h3{margin:0;font-size:clamp(22px,3vw,34px);letter-spacing:-.025em;font-weight:700;transition:color .2s}
+summary:hover h3{color:var(--a)}
+summary .k{font:500 13px var(--m);color:var(--mute)}
+summary i{font-style:normal;font-size:28px;color:var(--b);transition:transform .25s;grid-row:1/3;grid-column:2}
+details[open] summary i{transform:rotate(45deg)}
+.body{padding:0 0 30px;max-width:78ch}
+.body ul{margin:0 0 16px;padding-left:20px;color:var(--mute)}.body li{margin:6px 0}
+.body li strong{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span,.chips button{font:500 13px var(--m);padding:5px 11px;border-radius:99px;border:1px solid var(--line);color:var(--a);background:none}
+.role{font:500 14px var(--m);color:var(--b);margin:44px 0 4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chips button[aria-pressed=true]{background:var(--a);color:var(--bg);border-color:var(--a)}
+#sk{display:flex;flex-wrap:wrap;gap:10px;min-height:120px}
+#sk span{padding:9px 16px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);animation:pop .35s both}
+@keyframes pop{from{opacity:0;transform:scale(.92)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
+.grid h3{font:500 14px var(--m);color:var(--b);margin:0 0 14px}
+.grid p{margin:0 0 14px;color:var(--mute)}.grid p b{color:var(--ink);font-weight:700}
+.big{font-size:clamp(28px,5vw,64px);font-weight:800;letter-spacing:-.04em;line-height:1.05;word-break:break-word}
+footer{padding:30px clamp(18px,5vw,64px);color:var(--mute);border-top:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--b);color:#fff;padding:8px 14px;border-radius:8px;z-index:20}.skip:focus{left:8px}
+section:not(#hero){content-visibility:auto;contain-intrinsic-size:auto 700px}
+@media(max-width:640px){nav div a{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to content</a>
+<nav><b>Heni Lachouak</b><div><a href="#work">Work</a><a href="#stack">Stack</a><a href="#research">Research</a><a href="#contact">Contact</a><button id="theme" aria-label="Toggle theme">◐</button></div></nav>
+
+<section id="hero">
+<canvas id="cv" aria-hidden="true"></canvas>
+<div class="hw">
+<h1>Messy documents in. Working AI out.</h1>
+<p class="sub">I'm an AI &amp; Data Engineer. I build production LLM systems and the data pipelines that feed them: OCR to structured ETL, RAG ingestion, curated datasets, models served through APIs.</p>
+<div class="cta"><a class="btn p" href="#work">See the work</a><a class="btn" href="mailto:hani.lachouak@gmail.com">Get in touch</a></div>
+<div class="pipe"><span>OCR</span><span>ETL</span><span>LLM</span><span>API</span><span>Production</span></div>
+</div>
+</section>
+
+<section id="impact">
+<h2>Results in production</h2>
+<p class="lead">Numbers from systems that run for real clients in France and Tunisia.</p>
+<div class="stats">
+<div><b data-n="75" data-s="%">75%</b><span>less manual review per legal document</span></div>
+<div><b data-n="97" data-s="%">97%</b><span>precision, YOLOv8 defect segmentation</span></div>
+<div><b data-n="50" data-p="&lt;" data-s="ms">&lt;50ms</b><span>inference on NVIDIA Jetson Xavier</span></div>
+<div><b data-n="99" data-s="%">99%</b><span>accuracy on JustRAIGS glaucoma benchmark</span></div>
+<div><b data-n="3" data-s="x">3x</b><span>outreach volume with the prospecting agent</span></div>
+</div>
+</section>
+
+<section id="work">
+<h2>Selected work</h2>
+<p class="lead">Open a project to see what I built and with what.</p>
+<div id="jobs"></div>
+</section>
+
+<section id="stack">
+<h2>Stack</h2>
+<p class="lead">Pick a category.</p>
+<div class="chips" id="chips" role="group" aria-label="Skill categories"></div>
+<div id="sk" aria-live="polite"></div>
+</section>
+
+<section id="research">
+<h2>Research &amp; recognition</h2>
+<p class="lead">Published researcher, hackathon winner.</p>
+<div class="grid">
+<div><h3>Publications</h3>
+<p><b>PhysioSensAI</b>: real-time physical assessment and pain detection in rehabilitation. Neural Computing and Applications, 2026 (Q1, IF 4.5)</p>
+<p><b>Bi-LSTM</b> for non-invasive forecasting of hypotension from PPG signals. FRCCS, 2025</p>
+<p><b>Hybrid CNN-Swin Transformer</b> for glaucoma screening in fundus images. IEEE AICCSA, 2024</p></div>
+<div><h3>Research roles</h3>
+<p><b>CESI LINEACT, France</b> (2025). Multimodal data collection and a spatio-temporal GNN/Transformer framework deployed in a clinical web app.</p>
+<p><b>LaTICE, Tunisia</b> (2024). Hybrid CNN-Transformer with self-supervised pretraining, 99% accuracy, Grad-CAM explanations.</p></div>
+<div><h3>Awards</h3>
+<p><b>1st</b> Datathon AI for Healthcare, France, 2025</p>
+<p><b>3rd</b> Nuit de l'Info, SFEIR Challenge, 2025 and 2024</p>
+<p><b>2nd</b> Nuit de l'Info, veep.ai, 2023</p></div>
+<div><h3>Education</h3>
+<p><b>Master-level Engineering in AI &amp; Data Science</b>, EPI Digital School, 2025, highest honors</p>
+<p><b>Computer Science Engineering</b>, Military Academy, Tunisia, 2024</p>
+<p>Azure Fundamentals, AWS Cloud Foundations, Oracle Cloud AI, 3 NVIDIA courses</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Let's build something.</h2>
+<p class="lead">Arabic (native), French (C1), English (B2+). Based in Tunisia, working with teams in France.</p>
+<a class="big" href="mailto:hani.lachouak@gmail.com">hani.lachouak@gmail.com</a>
+<p style="color:var(--mute)">+216 48 190 414</p>
+</section>
+<footer><span>© 2026 Heni Lachouak</span><span>AI &amp; Data Engineer</span></footer>
+
+<script>
+const J=[
+["AI & Automation Engineer · Nehos Groupe, France","Aug. 2025 to present",[
+["Legal data extraction for real estate","LegalTech · ETL · Fine-tuning",["<strong>OCR-to-structured ETL</strong> turning deeds from the 1980s to today into a queryable MongoDB model.","Rebuilt each property's full ownership history by linking parties, acts and dates across documents.","Expert-in-the-loop validation that controls quality and builds a curated fine-tuning dataset.","Fine-tuned Qwen with QLoRA and served it in a React + MongoDB app: <strong>~75% less manual review</strong> per document."],"Gemini OCR,Qwen,QLoRA,Unsloth,vLLM,Ollama,LangChain,MongoDB,n8n"],
+["Content & outreach automation","Marketing · SEO · RAG",["n8n pipelines publishing daily to Facebook and LinkedIn: <strong>~90% less manual scheduling</strong>.","Document ingestion and indexing layer (chunking, embeddings, vector store) behind the RAG systems.","SEO article generator that cut production time by ~70%, and a prospecting system that <strong>tripled outreach</strong>.","Persona prompts versioned and traced in LangChain and LangSmith."],"n8n,LangChain,LangSmith,RAG,OpenAI,Mistral"],
+["AI voice call-bot agent","Customer service · Multi-agent",["Production multi-agent bot that qualifies inbound calls, routes them and books appointments: <strong>~60% faster call processing</strong>.","RAG/KAG retrieval layer serving real-time knowledge to agents, on microservices integrated via Twilio."],"Twilio,Gemini,LangGraph,LangSmith,RAG/KAG,n8n"]]],
+["AI Engineer, Industry 4.0 · Autoliv, Tunisia","Jan. 2024 to Dec. 2024 · Freelance",[
+["Production report extraction pipeline","ETL · LLM",["Extracts tables, charts and text from production reports with OCR and loads structured records: <strong>no more manual data entry</strong>.","Validation agent routes and checks each record before loading, feeding a real-time production timeline.","Local LLMs with Ollama and LangChain, exposed through FastAPI."],"Ollama,LangChain,FastAPI,OCR,Python"],
+["Visual defect detection","Computer vision · Edge AI",["Image pipeline: UV capture, Roboflow annotation, AWS S3 storage.","YOLOv8 at <strong>97% precision</strong>, deployed on Jetson Xavier at under 50 ms.","Real-time quality-control dashboard for line supervisors."],"YOLOv8,Roboflow,AWS S3,NVIDIA Jetson"]]],
+["Personal project","",[
+["CV Job Matcher","NLP · Semantic search",["LLM parses resumes and job posts into structured profiles.","Embedding-based ranking with explainable scores and skill-gap analysis, served via FastAPI."],"Python,LLMs,Embeddings,FastAPI"]]]];
+const jobs=document.getElementById('jobs');
+jobs.innerHTML=J.map(([r,d,ps])=>`<div class="role">${r}${d?' · '+d:''}</div>`+ps.map(([t,k,l,tg])=>`<details><summary><h3>${t}</h3><span class="k">${k}</span><i aria-hidden="true">+</i></summary><div class="body"><ul>${l.map(x=>`<li>${x}</li>`).join('')}</ul><div class="tags">${tg.split(',').map(x=>`<span>${x}</span>`).join('')}</div></div></details>`).join('')).join('');
+const S={"Data engineering":"SQL,Python,Pandas,ETL/ELT,Data modeling,Data validation,Spark / PySpark,Delta Lake,dbt","Cloud & storage":"Azure Databricks,AWS S3,AWS Lambda,SageMaker,MySQL,MongoDB,FAISS,Pinecone","AI engineering":"LLMs,RAG / KAG,LangChain,LangGraph,LangSmith,MCP,Multi-agent,QLoRA (Unsloth),Ollama,vLLM,Prompt engineering","ML & deep learning":"PyTorch,TensorFlow,Hugging Face,OpenCV,CNNs,Transformers / ViT,GNNs,LSTMs,Computer vision,NLP,XAI","Delivery":"n8n,FastAPI,Flask,Docker,Git,CI/CD,Roboflow,Label Studio,JavaScript,C/C++"};
+const chips=document.getElementById('chips'),sk=document.getElementById('sk');
+function show(k){[...chips.children].forEach(b=>b.setAttribute('aria-pressed',b.textContent===k));sk.innerHTML=S[k].split(',').map((x,i)=>`<span style="animation-delay:${i*35}ms">${x}</span>`).join('')}
+Object.keys(S).forEach(k=>{const b=document.createElement('button');b.textContent=k;b.onclick=()=>show(k);chips.appendChild(b)});
+show("AI engineering");
+// count-up
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target,n=+el.dataset.n,p=el.dataset.p||'',s=el.dataset.s||'';let t0;
+const f=t=>{t0=t0||t;const v=Math.min(1,(t-t0)/1200);el.innerHTML=p+Math.round(n*(1-Math.pow(1-v,3)))+s;if(v<1)requestAnimationFrame(f)};requestAnimationFrame(f)}),{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(e=>io.observe(e));
+// theme
+const T=document.documentElement,tb=document.getElementById('theme');
+try{const s=localStorage.getItem('th');if(s)T.dataset.theme=s}catch(e){}
+tb.onclick=()=>{const l=T.dataset.theme?T.dataset.theme==='light':matchMedia('(prefers-color-scheme:light)').matches;T.dataset.theme=l?'dark':'light';try{localStorage.setItem('th',T.dataset.theme)}catch(e){}};
+// hero canvas: raw tokens -> stages -> structured output
+const c=document.getElementById('cv'),x=c.getContext('2d');let W,H,P=[],mx=-1e3,my=-1e3;
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function rs(){const r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);P=Array.from({length:Math.round(W/14)},()=>mk(true))}
+function mk(i){return{x:i?Math.random()*W:-10,y:Math.random()*H,v:.5+Math.random()*1.2,s:3+Math.random()*5,j:Math.random()*6.28,r:Math.random()}}
+function col(n){return getComputedStyle(T).getPropertyValue(n).trim()}
+c.parentElement.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+function draw(){x.clearRect(0,0,W,H);const A=col('--a'),B=col('--b'),M=col('--line'),g=[.45,.7];
+x.strokeStyle=M;x.lineWidth=1;g.forEach(q=>{x.beginPath();x.moveTo(W*q,0);x.lineTo(W*q,H);x.stroke()});
+for(const p of P){const u=p.x/W;p.x+=p.v*(rm?0:1);
+const dx=p.x-mx,dy=p.y-my,dd=dx*dx+dy*dy;if(dd<14000){p.y+=dy/Math.sqrt(dd+1)*1.6}
+if(u<g[0]){p.j+=.05;x.fillStyle=M;x.save();x.translate(p.x,p.y+Math.sin(p.j)*6);x.rotate(p.j);x.fillRect(-p.s/2,-p.s/2,p.s,p.s);x.restore()}
+else if(u<g[1]){x.fillStyle=A;x.fillRect(p.x-p.s/2,Math.round(p.y/18)*18-p.s/2,p.s*1.6,p.s/1.6)}
+else{x.fillStyle=p.r>.82?B:A;x.beginPath();x.arc(p.x,Math.round(p.y/28)*28,p.s/2+1,0,6.28);x.fill()}
+if(p.x>W+10)Object.assign(p,mk(false))}
+}
+let run=false;function loop(){if(!run)return;draw();requestAnimationFrame(loop)}
+new IntersectionObserver(([e])=>{const v=e.isIntersecting;if(v&&!run&&!rm){run=true;loop()}else if(!v)run=false}).observe(c);
+addEventListener('resize',()=>{rs();draw()});rs();draw();
+</script>
+</body>
+</html>
