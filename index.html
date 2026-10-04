@@ -14,13 +14,13 @@
         rel="stylesheet">
     <style>
         :root {
-            --bg: #36d736;
-            --sf: #fff;
-            --tx: #18231F;
-            --mu: #5C6B65;
-            --ln: #DCE3DE;
-            --ac: #0B6E4F;
-            --ac2: #E1F1EA;
+            --bg: #FFFFFF;
+            --sf: #F5F6F8;
+            --tx: #111827;
+            --mu: #5B6472;
+            --ln: #E3E6EB;
+            --ac: #2F5BEA;
+            --ac2: #E8EEFF;
             box-sizing: border-box;
             padding-top: env(safe-area-inset-top, 0px);
             padding-bottom: env(safe-area-inset-bottom, 0px)
@@ -28,24 +28,24 @@
 
         @media(prefers-color-scheme:dark) {
             :root:not([data-theme="light"]) {
-                --bg: #0F1A16;
-                --sf: #16251F;
-                --tx: #E6EFEA;
-                --mu: #93A89F;
-                --ln: #27403A;
-                --ac: #4FCB9C;
-                --ac2: #173A2E
+                --bg: #0E1117;
+                --sf: #161B22;
+                --tx: #E6EAF0;
+                --mu: #8B95A5;
+                --ln: #262D38;
+                --ac: #7FA2FF;
+                --ac2: #1B2540
             }
         }
 
         :root[data-theme="dark"] {
-            --bg: #0F1A16;
-            --sf: #16251F;
-            --tx: #E6EFEA;
-            --mu: #93A89F;
-            --ln: #27403A;
-            --ac: #4FCB9C;
-            --ac2: #173A2E
+            --bg: #0E1117;
+            --sf: #161B22;
+            --tx: #E6EAF0;
+            --mu: #8B95A5;
+            --ln: #262D38;
+            --ac: #7FA2FF;
+            --ac2: #1B2540
         }
 
         html {
@@ -194,6 +194,16 @@
             font-size: 18px;
             color: var(--mu);
             max-width: 62ch
+        }
+
+        .me {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--ln);
+            margin-bottom: 20px;
+            display: block
         }
 
         .ph {
@@ -433,6 +443,7 @@
     <main id="m"></main>
     <div id="lb"><img alt=""></div>
     <script>
+        const EXT = ['jpeg', 'png', 'webp', 'JPG', 'PNG']; function phFix(i) { const n = +(i.dataset.n || 0); if (n < EXT.length) { i.dataset.n = n + 1; i.src = 'assets/heni.' + EXT[n] } else i.style.display = 'none' }
         let L = 0; const $ = s => document.querySelector(s), T = x => Array.isArray(x) ? x[L] : x;
         const S = { ev: ["Events", "Événements"], evd: ["Conferences, meetups and hackathons I attended or hosted.", "Conférences, rencontres et hackathons auxquels j'ai participé ou que j'ai animés."], cert: ["Certificate coming soon", "Certificat à venir"], post: ["View LinkedIn post", "Voir le post LinkedIn"], ph: ["Photos & certificates", "Photos et certificats"], home: ["Home", "Accueil"], exp: ["Experience", "Expérience"], res: ["Research & awards", "Recherche et distinctions"], con: ["Contact", "Contact"], prof: ["Profiles", "Profils"], demo: ["Demo video coming soon", "Vidéo démo à venir"], shots: ["Screenshots", "Captures d'écran"], proj: ["Projects", "Projets"], skills: ["Core skills", "Compétences clés"], back: ["Back to", "Retour à"], pub: ["Publications", "Publications"], aw: ["Awards", "Distinctions"], ed: ["Education & certifications", "Formation et certifications"] };
         const R = {
@@ -463,7 +474,7 @@
         function render() {
             const h = location.hash || '#/', a = h.split('/').slice(1), m = $('#m'); let o = ''; const bc = (...x) => `<div class="bc"><a href="#/">${T(S.home)}</a>${x.map(y => ' / ' + y).join('')}</div>`;
             $('#sub').textContent = L ? "Ingénieur IA & Data" : "AI & Data Engineer";
-            if (!a[0]) { o = `<div class="ph">Your photo here<br>(replace me)</div><h1>Heni Lachouak</h1><p class="lead">${L ? "Ingénieur IA & Data avec plus de 2 ans d'expérience sur des systèmes LLM en production et les pipelines de données qui les alimentent." : "AI & Data Engineer with 2+ years building production LLM systems and the data pipelines that feed them."}</p><div class="cards">${Object.keys(R).map(r => `<a class="c" href="#/${r}"><h3>${R[r].n}</h3><p>${T(R[r].d)}</p><p class="tg">${P.filter(p => p.r.includes(r)).length} ${T(S.proj).toLowerCase()}</p></a>`).join('')}</div>` }
+            if (!a[0]) { o = `<img class="me" src="assets/heni.jpg" alt="Heni Lachouak" onerror="phFix(this)"><h1>Heni Lachouak</h1><p class="lead">${L ? "Ingénieur IA & Data avec plus de 2 ans d'expérience sur des systèmes LLM en production et les pipelines de données qui les alimentent." : "AI & Data Engineer with 2+ years building production LLM systems and the data pipelines that feed them."}</p><div class="cards">${Object.keys(R).map(r => `<a class="c" href="#/${r}"><h3>${R[r].n}</h3><p>${T(R[r].d)}</p><p class="tg">${P.filter(p => p.r.includes(r)).length} ${T(S.proj).toLowerCase()}</p></a>`).join('')}</div>` }
             else if (R[a[0]] && !a[1]) { const r = a[0]; o = bc(R[r].n) + `<h1>${R[r].n}</h1><p class="lead">${T(R[r].d)}</p><h2>${T(S.proj)}</h2>${P.filter(p => p.r.includes(r)).map(p => pl(p.id, r)).join('')}<h2>${T(S.skills)}</h2><p>${R[r].k}</p>` }
             else if (R[a[0]]) { const r = a[0], p = P.find(x => x.id === a[1]); if (p) o = bc(`<a href="#/${r}">${R[r].n}</a>`, p.n) + `<h1>${p.n}</h1><p class="tg">${p.tg}</p><p class="lead">${T(p.s)}</p><ul class="p">${p.p.map(x => `<li>${T(x)}</li>`).join('')}</ul><p><b>Stack:</b> ${p.t}</p>${p.l.map(l => `<a class="btn" href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join('')}<div class="demo">${T(S.demo)}</div>${p.i.length ? `<h2>${T(S.shots)}</h2><div class="shots">${p.i.map(i => `<figure style="margin:0"><img src="${i[0]}" alt="${T(i.slice(1))}"><figcaption class="bc">${i[L + 1]}</figcaption></figure>`).join('')}</div>` : ''}<p><a href="#/${r}">← ${T(S.back)} ${R[r].n}</a></p>` }
             else if (a[0] == 'events') { const e = EV.find(x => x.id == a[1]); o = e ? bc(`<a href="#/events">${T(S.ev)}</a>`, T(e.n)) + `<h1>${T(e.n)}</h1><p class="tg">${T(e.d)}</p><p class="lead">${T(e.s)}</p>${e.p ? `<ul class="p">${e.p.map(x => `<li>${T(x)}</li>`).join('')}</ul>` : ''}${e.l.map(l => `<a class="btn" href="${l}" target="_blank" rel="noopener">${T(S.post)} ↗</a>`).join('')}${e.i.length ? `<h2>${T(S.ph)}</h2><div class="shots">${e.i.map(i => `<figure style="margin:0"><img src="${i[0]}" alt="${T(i.slice(1))}"><figcaption class="bc">${i[L + 1]}</figcaption></figure>`).join('')}</div>` : ''}${e.c ? '' : `<div class="demo">${T(S.cert)}</div>`}<p><a href="#/events">← ${T(S.back)} ${T(S.ev)}</a></p>` : bc(T(S.ev)) + `<h1>${T(S.ev)}</h1><p class="lead">${T(S.evd)}</p><div style="margin-top:20px">${EV.map(e => `<a class="row" href="#/events/${e.id}"><b>${T(e.n)}</b><span>${T(e.s)}</span><span class="tg">${T(e.d)}</span></a>`).join('')}</div>` }
